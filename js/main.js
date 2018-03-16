@@ -8,7 +8,7 @@ var moreBeer = 'moreBeer';
 var trash = 'trash';
 var oneBeerChance = 55;
 var threeBeerChance = 5;
-var activePlayer = 1
+var activePlayer = 1;
 var winnerScore = 0;
 var random;
 $('.gameOver').hide();
@@ -29,7 +29,7 @@ $(document).ready(function () {
                 get1($(this), beer);
             } else {
                 get0($(this), trash);
-            }
+            };
 
             if ($('.fieldDone').length === 25) {
                 $('.gameOver').fadeIn(2000);
@@ -43,11 +43,12 @@ $(document).ready(function () {
                     $('.final-score').text('Z wynikiem ' + winnerScore + ' szt. ' + $('.player-1-name').text() + ' stawia dzisiaj kolejkę :)' );
                 } else {
                     winnerScore = player1Score;
-
-                }
-            }
-        }
-    })
+                    $('.winner').text('Remis')
+                    $('.final-score').text('Z wynikiem ' + winnerScore + ('szt. Nikt dzisiaj nie stawia :)'));
+                };
+            };
+        };
+    });
 
     function get1(field) {
         get0(field, beer)
@@ -60,7 +61,7 @@ $(document).ready(function () {
             player2Score += temporaryScore;
             temporaryScore = 0
             $('.player-' + activePlayer + '-score').text(player2Score);
-        }
+        };
 
     };
 
@@ -75,7 +76,7 @@ $(document).ready(function () {
             player2Score += temporaryScore;
             temporaryScore = 0
             $('.player-' + activePlayer + '-score').text(player2Score);
-        }
+        };
 
     };
 
@@ -83,7 +84,7 @@ $(document).ready(function () {
         $(field).removeClass(defaultField).addClass(type).addClass("fieldDone");
         if (type === 'trash') {
             nextPlayer();
-        }
+        };
     };
 
     function nextPlayer() {
@@ -92,11 +93,11 @@ $(document).ready(function () {
             activePlayer = 2;
         } else {
             activePlayer = 1;
-        }
+        };
         
         $(".player-1").toggleClass("active");
         $(".player-2").toggleClass("active");
-    }
+    };
 
 function init() {
     activePlayer = 1;
@@ -120,16 +121,16 @@ function init() {
         $('.player-2-name').text('Gracz-2')
     }else {
         $('.player-2-name').text($('.name-2').val())
-    }
+    };
      
-}
+};
 
     $('.init').click(function(){
         init();
-    })
+    });
     
     $('.start').click(function(){
         init();
-    })
+    });
     
 });
