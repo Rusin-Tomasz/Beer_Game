@@ -198,3 +198,14 @@ img {
 .init-cn button:hover {
     background-color: #FFF;
 }
+
+
+.icons {
+    margin-top: 50px;
+    color: #432a48;
+}
+
+.icons a {
+    text-decoration: none;
+    color: #432a48;
+}

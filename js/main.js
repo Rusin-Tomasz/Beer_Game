@@ -17,7 +17,7 @@ $('.wrapper').hide();
 
 $(document).ready(function () {
 
-//    init();
+    //    init();
 
     $('.field').click(function () {
         if ($(this).hasClass('grass')) {
@@ -36,11 +36,11 @@ $(document).ready(function () {
                 if (player1Score > player2Score) {
                     winnerScore = player1Score
                     $('.winner').text('Wygrał ' + $('.player-1-name').text());
-                    $('.final-score').text('Z wynikiem ' + winnerScore + ' szt. ' + $('.player-2-name').text() + ' stawia dzisiaj kolejkę :)' );
+                    $('.final-score').text('Z wynikiem ' + winnerScore + ' szt. ' + $('.player-2-name').text() + ' stawia dzisiaj kolejkę :)');
                 } else if (player1Score < player2Score) {
                     winnerScore = player2Score
                     $('.winner').text('Wygrał ' + $('.player-2-name').text());
-                    $('.final-score').text('Z wynikiem ' + winnerScore + ' szt. ' + $('.player-1-name').text() + ' stawia dzisiaj kolejkę :)' );
+                    $('.final-score').text('Z wynikiem ' + winnerScore + ' szt. ' + $('.player-1-name').text() + ' stawia dzisiaj kolejkę :)');
                 } else {
                     winnerScore = player1Score;
                     $('.winner').text('Remis')
@@ -94,43 +94,45 @@ $(document).ready(function () {
         } else {
             activePlayer = 1;
         };
-        
+
         $(".player-1").toggleClass("active");
         $(".player-2").toggleClass("active");
     };
 
-function init() {
-    activePlayer = 1;
-    temporaryScore = 0;
-    player1Score = 0;
-    player2Score = 0;
-    winnerScore = 0;
-    $('.gameOver').hide();
-    $('.player-1-score').text(0);
-    $('.player-2-score').text(0);
-    $('.field').removeClass('beer moreBeer trash fieldDone').addClass(defaultField);
-    $('.init-cn').hide();
-    $('.wrapper').show();
-    
-    if($('.name-1').val() == '') {
-        $('.player-1-name').text('Gracz-1')
-    }else {
-        $('.player-1-name').text($('.name-1').val())
-    }
-     if($('.name-2').val() == '') {
-        $('.player-2-name').text('Gracz-2')
-    }else {
-        $('.player-2-name').text($('.name-2').val())
-    };
-     
-};
+    function init() {
+        activePlayer = 1;
+        temporaryScore = 0;
+        player1Score = 0;
+        player2Score = 0;
+        winnerScore = 0;
+        $('.gameOver').hide();
+        $('.player-1-score').text(0);
+        $('.player-2-score').text(0);
+        $('.field').removeClass('beer moreBeer trash fieldDone').addClass(defaultField);
+        $('.init-cn').hide();
+        $('.wrapper').show();
+        $('.player-1').removeClass('active');
+        $('.player-2').removeClass('active');
+        $('.player-1').addClass('active');
+        if ($('.name-1').val() == '') {
+            $('.player-1-name').text('Gracz-1')
+        } else {
+            $('.player-1-name').text($('.name-1').val())
+        }
+        if ($('.name-2').val() == '') {
+            $('.player-2-name').text('Gracz-2')
+        } else {
+            $('.player-2-name').text($('.name-2').val())
+        };
 
-    $('.init').click(function(){
+    };
+
+    $('.init').click(function () {
         init();
     });
-    
-    $('.start').click(function(){
+
+    $('.start').click(function () {
         init();
     });
-    
+
 });
