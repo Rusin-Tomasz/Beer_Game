@@ -48,7 +48,7 @@ img {
 }
 
 .field:hover {
-    transform: scale(1.1);
+    transform: translateY(-3px);
 }
 
 .gameOver {
@@ -151,7 +151,7 @@ img {
 }
 
 .fieldDone:hover {
-    transform: scale(1);
+    transform: translateY(0);
 }
 
 .init {
