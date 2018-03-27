@@ -47,9 +47,7 @@ img {
     transition: all 0.4s;
 }
 
-.field:hover {
-    transform: translateY(-3px);
-}
+
 
 .gameOver {
     position: absolute;
@@ -76,8 +74,6 @@ img {
     line-height: 30px;
 
 }
-
-
 
 .players-cn {
     width: 350px;
@@ -128,8 +124,6 @@ img {
     margin: 0;
 }
 
-
-
 .active {
     background-color: #d4d4d4;
 }
@@ -148,10 +142,6 @@ img {
 
 .fieldDone {
     transition: none;
-}
-
-.fieldDone:hover {
-    transform: translateY(0);
 }
 
 .init {
@@ -183,7 +173,6 @@ img {
     border: none;
     outline: none;
 }
-
 
 
 .init-cn input {

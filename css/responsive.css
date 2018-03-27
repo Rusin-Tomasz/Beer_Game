@@ -1,0 +1,11 @@
+@media all and (min-width: 500px) {
+    .field:hover {
+        transform: translateY(-3px);
+    }
+
+    .fieldDone:hover {
+        transform: translateY(0);
+    }
+
+
+}
